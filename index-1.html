@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Correspond — AI Chat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="rail">
+      <div class="rail-mark">§</div>
+      <div class="rail-title">Correspond</div>
+      <button id="new-chat" class="rail-new" title="New conversation">+ New</button>
+      <div class="rail-spacer"></div>
+      <div class="rail-hint">Local session only —<br>nothing is saved on refresh.</div>
+    </aside>
+
+    <main class="conversation">
+      <header class="thread-header">
+        <span class="thread-label">Thread</span>
+        <span class="thread-index" id="msg-count">No.&nbsp;000</span>
+      </header>
+
+      <div class="log" id="log">
+        <div class="empty-state" id="empty-state">
+          <p class="empty-mark">¶</p>
+          <p>Start the conversation below.</p>
+        </div>
+      </div>
+
+      <form class="composer" id="composer">
+        <textarea
+          id="input"
+          rows="1"
+          placeholder="Write your message…"
+          autofocus
+        ></textarea>
+        <button type="submit" id="send" aria-label="Send message">
+          <span class="send-mark">✎</span>
+        </button>
+      </form>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
